@@ -1,0 +1,57 @@
+<section class="container-fluid bg-white my-2 ">
+  <article class="row card">
+    <div class="col-3 bg-light text-center">
+{{#if user}}
+       <span class="editIcon">
+            <a
+              href="/employee/edit-emp/{{payload._id}}"
+              class="btn btn-primary btn-sm btn-block"
+            > <i class="fas fa-edit"></i>Edit</a>
+
+    </span>
+    {{else}}
+    {{/if}}
+
+      <figure class="my-2 p-2">
+        <img
+          src="{{trimString payload.emp_photo.0.path}}"
+        class="img-thumbnail p-2"
+        width="100%"
+        height="100%"
+        />
+
+      </figure>
+      <h2 class="h2 text-uppercase text-primary font-weight-bold p-2 text-center">{{payload.empname}}</h2>
+      <p class="lead">{{payload.email}}</p>
+    </div>
+    <div class="col-9 bg-white my-2 p-2 container-fluid text-capitalize">
+      <main>
+        <h1 class="text-uppercase border-bottom font-weight-bold text-dark p-2 container-fluid ml-2">{{payload.empname}}</h1>
+      
+        <div class="container-fluid">
+        <p class="lead p-1">Skills: {{payload.skills}}</p>
+      <p class="lead p-1">Education: {{payload.emp_education}}</p>
+      <p class="lead p-1">Location:{{payload.loc}}</p>
+      <p class="lead p-1">Gender:{{payload.gender}}</p>
+      <p class="lead p-1">Phone:{{payload.phone}}</p>
+      <p class="lead p-1">Salary:{{payload.emp_salary}}</p>
+        </div>
+      
+    </div>
+
+      </main>
+      {{#if user}}
+      <form class="col-3 text-danger" method="post" action="/employee/delete/{{payload._id}}?_method=DELETE">
+          <input type="hidden" name="_method" value="DELETE"/>
+        <button class="bg-danger w-50 mt-4 h-40 ">
+            Delete
+        </button>
+        </form>
+      {{else}}
+      {{/if}}
+      
+    </div>
+    
+
+  </article>
+</section> 

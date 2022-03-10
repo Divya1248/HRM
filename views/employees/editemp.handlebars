@@ -1,0 +1,139 @@
+<section class="container bg-white my-4 border-5">
+  <article>
+    <main class="employeeBlock">
+      <h2 class="h2 uppercase py-3 font-weight-bold text-success">Update employe</h2>
+      <form
+        action="/employee/edit-emp/{{editPayload._id}}?_method=PUT"
+        method="post"
+        enctype="multipart/form-data"
+      >
+        <input type="hidden" name="_method" value="PUT" />
+        <div class="row">
+          <div class="col-3 form-group py-3"><label
+              for="empname"
+            >empname</label><input
+              type="text"
+              class="form-control"
+              name="empname"
+              id="empname"
+              placeholder="empname"
+              value={{editPayload.empname}}
+            /></div>
+          <div class="col-3 form-group py-3"><label for="">emp_id</label><input
+              type="text"
+              class="form-control"
+              name="emp_id"
+              placeholder="emp_id"
+              value={{editPayload.emp_id}}
+            /></div>
+          <div class="col-3 form-group py-3"><label
+              for=""
+            >emp_salary</label><input
+              type="text"
+              class="form-control"
+              name="emp_salary"
+              placeholder="emp_salary"
+              value={{editPayload.emp_salary}}
+            /></div>
+          <div class="col-3 form-group py-3"><label for="">phone</label><input
+              type="text"
+              class="form-control"
+              name="phone"
+              placeholder="enter your mobile number"
+              value={{editPayload.phone}}
+            /></div>
+          <div class="col-3 form-group py-3"><label
+              for="email"
+            >Email</label><input
+              type="text"
+              class="form-control"
+              name="email"
+              id="email"
+              placeholder="enter email address"
+              value={{editPayload.email}}
+            /></div>
+          <div class="col-3 form-group py-3"><label
+              for="loc"
+            >Location</label><input
+              type="text"
+              class="form-control"
+              name="loc"
+              id="loc"
+              placeholder="enter location"
+              value={{editPayload.loc}}
+            /></div>
+          <div class="col-3 form-group py-3"><label for="">emp_education</label>
+            <select
+              name="emp_education"
+              id="emp_education"
+              class="form-control text-uppercase"
+              value={{editPayload.emp_education}}
+            >
+
+              <option value="be">Be</option>
+              <option value="btech">btech</option>
+              <option value="mca">mca</option>
+              <option value="mba">mba</option>
+            </select>
+          </div>
+          <div class="col-3 form-group py-3 text-capitalize"><label
+              for="gender"
+            >gender</label><input
+              type="radio"
+              class="form-input text-capitalize"
+              value="male"
+              name="gender"
+            />male
+            <input
+              type="radio"
+              class="form-input text-capitalize"
+              value="female"
+              name="gender"
+            />female</div>
+          <div class="col-3 form-group py-3"><label for="empname">Employee Photo</label><input
+              type="file"
+              class="form-control"
+              name="emp_photo"
+              id="emp_photo"
+            /></div>
+          <div class="col-6 form-group py-3 text-capitalize px-3"><label
+              for="skills"
+              class="px-3"
+            >Skills</label><input
+              type="checkbox"
+              class="form-input"
+              id="skills"
+              name="skills"
+              value="html"
+            />html
+            <input
+              type="checkbox"
+              class="form-input"
+              name="skills"
+              id="skills"
+              value="css"
+            />css
+            <input
+              type="checkbox"
+              class="form-input"
+              name="skills"
+              id="skills"
+              value="bootstrap"
+            />bootstrap
+            <input
+              type="checkbox"
+              class="form-input"
+              name="skills"
+              id="skills"
+              value="react"
+            />react</div>
+          <div class="col-3 form-group py-3">
+            <button class="w-50 h-200 bg-success">submit</button>
+          </div>
+
+        </div>
+
+      </form>
+    </main>
+  </article>
+</section>

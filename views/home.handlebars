@@ -1,0 +1,93 @@
+{{!-- <section class="container-fluid my-4">
+  <article>
+    <table class="table table-bordered table-hover">
+      <thead class="table-dark">
+        <tr>
+          <th>photo</th>
+          <th>id</th>
+          <th>name</th>
+          <th>salary</th>
+          <th>education</th>
+          <th>gender</th>
+          <th>email</th>
+          <th>location</th>
+          <th>skills</th>
+          <th>Phone</th>
+          <th>View Profile</th>
+          <th>Update Profile</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each payload}}
+          <tr>
+            <td><img
+                class="img img-thumbnail"
+                src="{{trimString emp_photo.0.path}}"
+                alt=""
+                width="100"
+                height="100"
+              /></td>
+            <td>{{emp_id}}</td>
+            <td>{{empname}}</td>
+            <td>{{emp_salary}}</td>
+            <td>{{emp_education}}</td>
+            <td>{{gender}}</td>
+            <th>{{email}}</th>
+            <th>{{loc}}</th>
+            <td>{{skills}}</td>
+            <td>{{phone}}</td>
+            <td><a
+                href="/employee/{{_id}}"
+                class="btn btn-primary btn-sm btn-block"
+              >View Profile</a></td>
+            <td><a
+                href="/employee/edit-emp/{{_id}}"
+                class="btn btn-primary btn-sm btn-block"
+              >update Profile</a></td>
+          </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </article>
+</section> --}}
+
+{{! card }}
+<section class="container my-2">
+  <article>
+    <div class="card">
+      {{#each payload}}
+        <div class="card-body">
+          <img
+            class="card-img-top w-400 h-300"
+            src="{{trimString emp_photo.0.path}}"
+            alt="Card image cap"
+          />
+        
+            {{! <a href="/">
+              <i class="fas fa-edit"></i></a> }}
+
+          </span>
+          <div class="card-body">
+            <h5 class="card-title text-capitalize">{{empname}}</h5>
+            <p class="card-text">{{email}}</p>
+            <p class="card-text"><small class="text-muted">Last Updated 3
+                minutes ago</small></p>
+            {{!-- <p>
+              <a
+                href="/employee/{{_id}}"
+                class="btn btn-secondary btn-block"
+              >View Profile</a>
+            </p>
+              <span class="editIcon">
+            <a
+              href="/employee/edit-emp/{{_id}}"
+              class="btn btn-primary btn-sm btn-block"
+            > Update Profile</a>
+            </span> --}}
+
+          </div>
+        </div>
+      {{/each}}
+    </div>
+  </article>
+</section>

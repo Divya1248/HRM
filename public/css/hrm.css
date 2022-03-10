@@ -1,0 +1,70 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #efefef;
+}
+
+.card-img-top {
+  width: 200;
+}
+
+.alert {
+  position: absolute;
+  top: 10%;
+  right: 1%;
+  margin: 3px;
+  transform: translate(1000px);
+  transition: ease all 0.4s;
+  z-index: 1111;
+  font-size: 15px;
+}
+
+.alert-success {
+  background: #64b364f2;
+  padding: 10px;
+  color: #fff;
+  border-bottom: 3px solid darkgreen;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: capitalize;
+  text-shadow: 1px 1px 1px green;
+  border-radius: 3px 3px 3px 3px;
+  width: 325px;
+  text-align: center;
+}
+
+.alert-danger {
+  background: red;
+  padding: 10px;
+  color: #fff;
+  border-bottom: 3px solid darkred;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: capitalize;
+  text-shadow: 1px 1px 1px red;
+  border-radius: 3px 3px 3px 3px;
+  width: 325px;
+  text-align: center;
+}
+
+/* icon */
+.editIcon {
+  position: relative;
+}
+
+.editIcon i {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  right: -127px;
+  top: 0px;
+  z-index: 111;
+}
+.editIcon i:hover {
+  filter: grayscale();
+}
